@@ -1,0 +1,117 @@
+aid: tmx-group
+name: TMX Group
+review:
+  question: Does TMX Group expose a public, documented API surface for its market data?
+  answer: true
+  date: '2026-07-21'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    TMX Group's data arm, TMX Datalinx, runs a genuinely public developer
+    surface for its analytics tier while keeping its real-time exchange
+    feeds sales-gated. Public documentation lives at
+    https://docs.tmxanalytics.com/ (HTTP 200), a Slate-style single-page
+    portal for the "TMX Data Science API" in two generations: V1 on
+    https://analyticsapi.tmxanalytics.com/v1 (POST-based; CA/US equity
+    daily stats, intraday 1-min/1-sec trade and quote bars, TAQ NBBO tick
+    data, broker analytics, MX options/futures daily stats, short
+    interest, buybacks, price adjustment curves, MOC imbalance, issuers,
+    global symbols) and V2 on https://insightapi.tmxanalytics.com/v2
+    (GET-based; broker analytics, reference data plus CRV
+    bulletins/entitlements/FITC/SMF and S&P/TSX index datasets). Both
+    hosts are live: unauthenticated probes return HTTP 401, confirming a
+    real, entitlement-gated API rather than marketing vapor. Auth is
+    username/password plus an x-api-key from hub.tmxanalytics.com
+    exchanged at POST /authn for a bearer token valid one hour.
+    Onboarding is self-serve via hub.tmxanalytics.com (HTTP 200) with
+    documented subscription plans, limits, and billing; datasets are also
+    sold through the TMX Datalinx Webstore (tmxwebstore.com, HTTP 200,
+    "Unified API" product category). No public OpenAPI/Swagger/AsyncAPI
+    document is downloadable - the docs are generated HTML only - so no
+    spec was harvested. Real-time feeds (TL1/TL2, QuantumFeed,
+    PowerStream, MX Order Book Feed) are separate sales-gated broadcast
+    products on tmxinfoservices.com, and the Montreal Exchange documents
+    a FIX-based Trade Manager API for approved participants. Delivery
+    beyond REST includes cloud/S3 flat-file distribution and Zeppelin
+    notebook access, plus Excel and Google Sheets add-ins.
+  posture:
+    developerPortal: https://docs.tmxanalytics.com/
+    selfServe: true
+    selfServeScope: Analytics/historical REST APIs only; real-time feeds are sales-gated
+    authentication: API key (hub.tmxanalytics.com) + POST /authn bearer token (1-hour expiry)
+    pricingPublic: partial (subscription plans documented in docs; feed pricing via contract documents)
+    openApiSpec: none published
+    ownership: TMX Group Limited (TSX:X), Toronto - operates TSX, TSXV, TSX Alpha, Montreal Exchange; data brands include TMX Datalinx, TMX VettaFi, Wall Street Horizon, Trayport
+  transports:
+  - protocol: REST
+    scheme: https
+    baseURL: https://analyticsapi.tmxanalytics.com/v1
+    documented: true
+    probedStatus: 401
+  - protocol: REST
+    scheme: https
+    baseURL: https://insightapi.tmxanalytics.com/v2
+    documented: true
+    probedStatus: 401
+  - protocol: Multicast
+    documented: true
+    note: Real-time broadcast feeds (TL1/TL2, CL1/CL2, AL1/AL2, QuantumFeed, MX Order Book Feed) listed on tmxinfoservices.com; sales-gated, no public technical specs.
+  - protocol: FIX
+    documented: true
+    note: Montreal Exchange Trade Manager FIX API for approved participants and clearing firms (m-x.ca market access pages).
+  - protocol: FlatFiles
+    documented: true
+    note: Cloud/S3 delivery documented in TMX Analytics docs (AWS CLI, S3 via WinSCP) and Datalinx cloud delivery marketing.
+  - protocol: WebSocket
+    documented: false
+    note: No public WebSocket or streaming API is documented on docs.tmxanalytics.com.
+  probes:
+  - url: https://www.tmx.com
+    status: 200
+  - url: https://docs.tmxanalytics.com/
+    status: 200
+  - url: https://hub.tmxanalytics.com
+    status: 200
+  - url: https://analyticsapi.tmxanalytics.com/v1/healthcheckfull
+    status: 401
+  - url: https://insightapi.tmxanalytics.com/v2/globalsymbols
+    status: 401
+  - url: https://www.tmxwebstore.com/
+    status: 200
+  - url: https://www.tmxinfoservices.com/
+    status: 200
+  - url: https://github.com/TMXGroup
+    status: 200
+  - url: https://developer.tmx.com
+    status: 0
+    note: no DNS
+  - url: https://docs.tmx.com
+    status: 0
+    note: no DNS
+  - url: https://docs.tmxanalytics.com/swagger.json
+    status: 404
+  - url: https://docs.tmxanalytics.com/openapi.json
+    status: 404
+sources:
+- url: https://docs.tmxanalytics.com/
+  type: Documentation
+  note: TMX Data Science API V1/V2 docs - endpoints, auth, plans, billing, S3 and notebook delivery, Excel/Sheets add-ins.
+- url: https://hub.tmxanalytics.com/
+  type: Portal
+  note: Self-serve account, API key generation, subscription management.
+- url: https://www.tmxwebstore.com/faq
+  type: Documentation
+  note: TMX Datalinx Webstore FAQ describing the Unified API - standardized REST, JSON responses, single-digit versioning, T-1 data by 6:30am ET.
+- url: https://www.tmxinfoservices.com/market-data/real-time-data
+  type: Documentation
+  note: Real-time broadcast feed catalog (TL1/TL2, QuantumFeed, PowerStream, MX OBF); subscription/sales-gated.
+- url: https://www.m-x.ca/en/trading/connectivity/market-access
+  type: Documentation
+  note: Montreal Exchange market access including FIX-based Trade Manager API for approved participants.
+actions:
+  openapiHarvested: false
+  reason: |
+    No machine-readable OpenAPI/Swagger/AsyncAPI artifact is publicly
+    downloadable from docs.tmxanalytics.com or the TMXGroup GitHub
+    organization; per no-fabrication policy nothing was authored. The
+    endpoint inventory above was harvested from the rendered docs HTML.
