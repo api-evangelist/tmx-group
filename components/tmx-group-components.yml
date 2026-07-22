@@ -1,0 +1,32 @@
+generated: '2026-07-22'
+method: searched
+source: https://docs.tmxanalytics.com/#microsoft-excel-addins
+components:
+  - family: Microsoft Excel Add-ins
+    name: TMX Data API ribbon (Analytics API + Datalinx API)
+    kind: desktop-addin
+    docs: https://docs.tmxanalytics.com/#microsoft-excel-addins
+    description: Windows Excel add-in (.exe installer) that adds a TMX Data API
+      ribbon with Analytics API and Datalinx API request forms - product picker,
+      date/symbol filters, sheet destination, automatic pagination on fetch.
+      Credentials are entered in an Account Info tab and stored in the user's
+      environment variables.
+    requirements: Windows OS, Excel 2021+, .NET Framework 2.7.2+
+  - family: Google Sheets Add-on
+    name: API to Sheets (Google Workspace add-on)
+    kind: sheets-addon
+    docs: https://docs.tmxanalytics.com/#google-sheets-add-on-for-apis
+    status: under construction (docs note the application "is under construction
+      and will be available soon"; setup steps document configuring the generic
+      "API to Sheets" add-on against the TMX Analytics API)
+    description: Documented workflow for pulling TMX Analytics API data into
+      Google Sheets - POST to analyticsapi.tmxanalytics.com/v1 paths with bearer
+      token + x-api-key headers and offset pagination (pageafter).
+  - family: TMX Grapevine
+    name: Grapevine managed notebook cluster
+    kind: hosted-environment
+    docs: https://docs.tmxanalytics.com/
+    description: AWS-hosted managed compute environment (per-client cluster of 5
+      nodes on a private VPC with 250GB S3 storage by default) exposing the TMX
+      Global Data Lake to SQL/Python users with Spark and Presto - the notebook
+      delivery channel alongside the REST APIs.

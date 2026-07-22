@@ -1,0 +1,50 @@
+generated: '2026-07-22'
+method: searched
+source: live probes of apis.yml + docs hosts
+note: No real /.well-known/ discovery documents were found on any TMX host.
+  hub.tmxanalytics.com returns HTTP 200 with an HTML SPA shell (content-type
+  text/html) for every path, which is a catch-all router, not a discovery
+  document; those 200s are recorded here but no raw files were saved because
+  the bodies are the app shell, not the named documents.
+hosts:
+  - host: https://www.tmx.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://docs.tmxanalytics.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://hub.tmxanalytics.com
+    documents:
+      - {path: /.well-known/security.txt, status: 200, note: HTML SPA shell, valid: false}
+      - {path: /.well-known/openid-configuration, status: 200, note: HTML SPA shell, valid: false}
+      - {path: /.well-known/oauth-authorization-server, status: 200, note: HTML SPA shell, valid: false}
+      - {path: /.well-known/api-catalog, status: 200, note: HTML SPA shell, valid: false}
+      - {path: /.well-known/ai-plugin.json, status: 200, note: HTML SPA shell, valid: false}
+      - {path: /llms.txt, status: 200, note: HTML SPA shell, valid: false}
+  - host: https://analyticsapi.tmxanalytics.com
+    documents:
+      - {path: /.well-known/security.txt, status: 403}
+      - {path: /.well-known/openid-configuration, status: 403}
+      - {path: /.well-known/oauth-authorization-server, status: 403}
+      - {path: /.well-known/api-catalog, status: 403}
+      - {path: /.well-known/ai-plugin.json, status: 403}
+      - {path: /llms.txt, status: 403}
+  - host: https://insightapi.tmxanalytics.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}

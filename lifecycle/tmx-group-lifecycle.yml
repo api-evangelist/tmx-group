@@ -1,0 +1,41 @@
+generated: '2026-07-22'
+method: searched
+source: https://docs.tmxanalytics.com/#api-versioning
+versioning:
+  scheme: uri-path
+  pattern: single-digit (v1, v2, ...)
+  current:
+    - api: TMX Data Science API V1
+      version: v1
+      host: https://analyticsapi.tmxanalytics.com
+    - api: TMX Data Science API V2 (Insight API)
+      version: v2
+      host: https://insightapi.tmxanalytics.com
+  docs: https://docs.tmxanalytics.com/#api-versioning
+  breaking_changes_documented:
+    - A change in the response type (e.g. integer to float)
+    - Change in the name of a response attribute (column name)
+    - Removal of a response attribute (column)
+  non_breaking_changes_documented:
+    - Fixing functional bugs
+    - Security fixes
+    - Addition of a new response attribute (column)
+    - Addition of new web-hook events
+    - Changing the order of existing attributes
+deprecation:
+  policy: When a new version of an API is available (e.g. v2), the older version
+    (e.g. v1) is supported for one year before it is phased out.
+  policy_url: https://docs.tmxanalytics.com/#api-versioning
+  support_window: 1 year after successor version release
+  sunset_header: false
+sla:
+  data_schedule: T-1 data available via the APIs by 6:30am ET Tuesday-Friday
+    (Friday data the following Monday); MX Analytics data by 9:00am ET.
+  data_availability_endpoint: POST /v1/dataavailability (Access APIs -> Data
+    Availability) reports when the most recent data was loaded for each API.
+health:
+  healthcheck: GET https://analyticsapi.tmxanalytics.com/v1/healthcheckfull
+status_page: null
+status_page_probes:
+  - {url: 'https://status.tmxanalytics.com', result: no-dns}
+  - {url: 'https://status.tmx.com', result: no-dns}

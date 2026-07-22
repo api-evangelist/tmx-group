@@ -1,0 +1,60 @@
+generated: '2026-07-22'
+method: searched
+source: https://docs.tmxanalytics.com/
+authentication:
+  style: x-api-key header + one-hour bearer token from POST /v1/authn (see
+    authentication/tmx-group-authentication.yml)
+request_style:
+  v1: POST-based query endpoints on https://analyticsapi.tmxanalytics.com/v1 -
+    JSON request bodies carry the query parameters (dates, symbols, columns).
+  v2: GET-based endpoints on https://insightapi.tmxanalytics.com/v2 with URL
+    query parameters (Insight API).
+  content_type: application/json (required request header)
+query_parameters:
+  case_sensitive: true
+  arrays: 'Multiple values are comma-delimited within square brackets, e.g.
+    "symbols": ["ABC","DEF"]'
+  url_encoding: Parameters must be URL-encoded (e.g. ?symbols=ABC%20DEF)
+  multi_value_v2: Some V2 fields take pipe-delimited multiple values
+    (e.g. indexcode, gicscode)
+  special_values: ALL_SYMBOLS requests all entitled symbols
+pagination:
+  style: offset
+  request_fields: [pageafter, pagebefore]
+  response_fields: [pageafter, pagebefore]
+  description: Resultsets are paginated by record offset - pass pageafter to get
+    records after a specific record, pagebefore for records before it. The Excel
+    add-in auto-paginates.
+data_formats:
+  response: JSON only
+  response_attributes: case-sensitive
+error_envelope:
+  shape: '{"message": "string"}'
+  format: custom (not RFC 9457)
+  catalog: errors/tmx-group-problem-types.yml
+rate_limit_signaling:
+  headers: none documented
+  behavior: Entitlement and limit violations return 403 with a message; monthly
+    plan-limit overage does not error (overage charges apply, notifications at
+    50/75/100%). See rate-limits/tmx-group-rate-limits.yml.
+idempotency:
+  supported: false
+  notes: No idempotency-key contract is documented; the surface is read-only
+    data queries plus account-management calls.
+versioning:
+  style: uri-path single-digit (v1, v2); prior version supported one year after
+    a new version ships. See lifecycle/tmx-group-lifecycle.yml.
+data_semantics:
+  schedule: T-1 data by 6:30am ET Tue-Fri (MX data by 9:00am ET); Friday data
+    lands the following Monday.
+  availability_check: POST /v1/dataavailability
+attribution:
+  required: true
+  text: '"Data provided by TMX Analytics" linked to https://www.tmx.com/analytics
+    (may live in terms of service when screen space is limited).'
+cross_links:
+  errors: errors/tmx-group-problem-types.yml
+  lifecycle: lifecycle/tmx-group-lifecycle.yml
+  authentication: authentication/tmx-group-authentication.yml
+  rate_limits: rate-limits/tmx-group-rate-limits.yml
+  plans: plans/tmx-group-plans.yml

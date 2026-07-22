@@ -1,0 +1,129 @@
+generated: '2026-07-22'
+method: searched
+source: https://docs.tmxanalytics.com/#errors
+format: custom
+envelope:
+  description: TMX Analytics uses HTTP response codes to indicate success or failure;
+    error responses carry a detailed message in a JSON body.
+  shape: '{"message": "string"}'
+notes: Two documented error catalogs - one for the V1 Data Science API
+  (analyticsapi.tmxanalytics.com) and one for V2 (insightapi.tmxanalytics.com).
+  Responses are not RFC 9457 problem+json; the envelope is a plain message object.
+  Entitlement/limit violations are signaled as 403, not 429.
+problems:
+  # V1 (https://docs.tmxanalytics.com/#errors)
+  - status: 200
+    api: Change Password (V1)
+    title: 'Information: Password changed successfully'
+  - status: 400
+    api: All APIs (V1)
+    title: 'Input Error: starttime is after endtime'
+  - status: 400
+    api: All APIs (V1)
+    title: 'Input Error: startdate is after enddate'
+  - status: 400
+    api: All APIs (V1)
+    title: 'Input Error: newpassword and confirmpassword do not match'
+  - status: 400
+    api: All APIs (V1)
+    title: 'Input Error: Data is available on T-1 basis. datestring should be before today'
+  - status: 400
+    api: All APIs (V1)
+    title: 'Input Error: Invalid request parameters'
+  - status: 401
+    api: Authenticate (V1)
+    title: 'Authentication Error: User credentials are incorrect'
+  - status: 401
+    api: Authenticate (V1)
+    title: 'Authentication Error: Password is incorrect'
+  - status: 403
+    api: All APIs (V1)
+    title: 'Authorization Error: User does not have access to any group'
+  - status: 403
+    api: All APIs (V1)
+    title: 'Authorization Error: User does not have access to the requested group'
+  - status: 403
+    api: All APIs (V1)
+    title: 'Limit Exceeded: symbol entered is not on the list of permitted symbols'
+  - status: 403
+    api: All APIs (V1)
+    title: 'Limit Exceeded: datestring cannot be prior to 30 days from the subscription date'
+  - status: 403
+    api: All APIs (V1)
+    title: "Limit Exceeded: datestring cannot be prior to the permitted 'lookback days' as per the subscription"
+  - status: 403
+    api: All APIs (V1)
+    title: "Limit Exceeded: Difference between startdate and enddate cannot be more than the permitted 'lookback days' as per the subscription"
+  - status: 403
+    api: All APIs (V1)
+    title: 'Limit Exceeded: Monthly request limit has been exceeded. Please try again next month'
+  - status: 403
+    api: All APIs (V1)
+    title: 'Limit Exceeded: Daily request limit has been exceeded. Please try again tomorrow'
+  - status: 403
+    api: All APIs (V1)
+    title: 'Limit Exceeded: Call limit has been exceeded. Please try again next month'
+  - status: 403
+    api: All APIs (V1)
+    title: Invalid API Key
+  - status: 424
+    api: Some APIs (V1)
+    title: Failed dependency (documented as a 424 response on several endpoints)
+  - status: 500
+    api: Change Password (V1)
+    title: 'System Error: Error occured while changing password. Please try again'
+  - status: 500
+    api: All APIs (V1)
+    title: System Error / AWS Authorization Token is invalid
+  # V2 (https://docs.tmxanalytics.com/#api-v2-errors)
+  - status: 401
+    api: Authenticate (V2)
+    title: 'Authentication Error: The credentials provided were invalid'
+  - status: 401
+    api: All APIs (V2)
+    title: Unauthorized / Authorization Token is invalid
+  - status: 400
+    api: All APIs (V2)
+    title: Startdate must be earlier than or same as enddate
+  - status: 400
+    api: All APIs (V2)
+    title: Enddate must be earlier than today's date
+  - status: 400
+    api: All APIs (V2)
+    title: Startdate must be earlier than today's date
+  - status: 400
+    api: All APIs (V2)
+    title: '{ColumnName} is a mandatory field'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Authorization Error: Subscription not found for User'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Authorization Error: User does not have access to any group'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Authorization Error: User does not have access to the requested group'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Limit Exceeded: The following symbols are not permitted: {SymbolsList}'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Limit Exceeded: datestring cannot be prior to 30 days from the subscription date'
+  - status: 403
+    api: All APIs (V2)
+    title: "Limit Exceeded: datestring cannot be prior to the permitted 'lookback days' as per the subscription"
+  - status: 403
+    api: All APIs (V2)
+    title: "Limit Exceeded: Difference between startdate and enddate cannot be more than the permitted 'lookback days' as per the subscription"
+  - status: 403
+    api: All APIs (V2)
+    title: 'Limit Exceeded: Monthly request limit has been exceeded. Please try again next month'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Limit Exceeded: Daily request limit has been exceeded. Please try again tomorrow'
+  - status: 403
+    api: All APIs (V2)
+    title: 'Limit Exceeded: Call limit has been exceeded. Please try again next month'
+  - status: 500
+    api: All APIs (V2)
+    title: System Error

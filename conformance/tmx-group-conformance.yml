@@ -1,0 +1,34 @@
+generated: '2026-07-22'
+method: derived
+source: https://docs.tmxanalytics.com/
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: Authentication is a proprietary x-api-key + username/password token
+      endpoint (POST /v1/authn); no OAuth 2.0 flows are documented.
+  - id: oidc
+    conforms: false
+    evidence: No openid-configuration discovery document on any host (404/SPA shell).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Error responses use a custom {"message" string} envelope, not
+      application/problem+json.
+  - id: pagination
+    conforms: true
+    evidence: Offset pagination via pageafter/pagebefore request and response
+      fields documented across V1 endpoints.
+  - id: api-versioning
+    conforms: true
+    evidence: Single-digit URI-path versioning (v1/v2) with a documented one-year
+      support window for superseded versions.
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency-key contract documented.
+  - id: rfc8594-sunset-header
+    conforms: false
+    evidence: No Sunset/Deprecation header support documented.
+  - id: fix-protocol
+    conforms: true
+    evidence: Montreal Exchange trading-side connectivity (Trade Manager API) is
+      FIX-based for approved participants; separate from the REST analytics surface
+      and sales-gated (per m-x.ca participant documentation).

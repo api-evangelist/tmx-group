@@ -1,0 +1,81 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: TMX Group
+providerId: tmx-group
+generated: '2026-07-22'
+method: searched
+source: https://docs.tmxanalytics.com/#subscription-plans-limits
+created: '2026-07-22'
+modified: '2026-07-22'
+tags:
+  - Rate Limiting
+  - Market Data
+description: TMX Analytics Data Science APIs enforce monthly call limits per group
+  per subscription plan (Free, Starter, Premium), plus symbol-coverage and lookback-day
+  entitlement limits. Documented 403 responses signal exceeded daily/monthly/call
+  limits and non-permitted symbols or lookback ranges; once the monthly plan limit
+  is exhausted overage charges apply and the API does not throw an error, with usage
+  notifications sent at 50%, 75%, and 100% of the monthly limit. No rate-limit
+  response headers are documented. Bearer tokens expire after one hour.
+sources:
+  - https://docs.tmxanalytics.com/#subscription-plans-limits
+  - https://docs.tmxanalytics.com/#errors
+responseCodes:
+  limitExceeded: 403
+limits:
+  - name: Equity Intraday Trades (Free)
+    scope: group
+    metric: api_calls_per_month
+    limit: 100000
+    timeFrame: month
+  - name: Equity Intraday Trades (Starter)
+    scope: group
+    metric: api_calls_per_month
+    limit: 500000
+    timeFrame: month
+  - name: Equity Intraday Trades (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 2000000
+    timeFrame: month
+  - name: Equity Intraday Quotes (Starter)
+    scope: group
+    metric: api_calls_per_month
+    limit: 500000
+    timeFrame: month
+  - name: Equity Intraday Quotes (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 2000000
+    timeFrame: month
+  - name: Trades & Quotes Tick Data TAQ NBBO (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 5000
+    timeFrame: month
+  - name: Essential Analytics for Options & Futures (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 100000
+    timeFrame: month
+  - name: Corporate Actions & Reference Data (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 100000
+    timeFrame: month
+  - name: Essential Analytics for Equities (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 100000
+    timeFrame: month
+  - name: Broker Analytics (Premium)
+    scope: group
+    metric: api_calls_per_month
+    limit: 100000
+    timeFrame: month
+  - name: Bearer token validity
+    scope: token
+    metric: token_ttl_seconds
+    limit: 3600
+    timeFrame: hour

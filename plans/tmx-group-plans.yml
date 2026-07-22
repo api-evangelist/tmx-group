@@ -1,0 +1,242 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: TMX Group
+providerId: tmx-group
+generated: '2026-07-22'
+method: searched
+source: https://docs.tmxanalytics.com/#subscription-plans-limits
+created: '2026-07-22'
+modified: '2026-07-22'
+tags:
+  - Market Data
+  - Analytics
+  - Subscription
+description: TMX Analytics Data Science APIs are sold as per-group subscription plans
+  (Free, Starter, Premium) with monthly call limits, symbol-coverage caps, and lookback
+  windows applied per group per plan. Billing is monthly in arrears; overage charges
+  apply once a plan's monthly call limit is exhausted, with notifications at 50%, 75%,
+  and 100% of the limit (the API itself does not error on overage of the monthly plan
+  limit). Signup is self-serve via hub.tmxanalytics.com; datasets are also sold through
+  the TMX Datalinx Webstore.
+sources:
+  - https://docs.tmxanalytics.com/#subscription-plans-limits
+  - https://docs.tmxanalytics.com/#billing
+  - https://www.tmxwebstore.com/
+plans:
+  - id: tmx-equity-intraday-trades-free
+    name: Equity Intraday Trades - Free
+    type: free
+    description: One-minute and one-second trade bars (CA/US) and OHLC CA.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 100000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: 50
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: days
+        limit: 30
+  - id: tmx-equity-intraday-trades-starter
+    name: Equity Intraday Trades - Starter
+    type: paid
+    description: One-minute and one-second trade bars (CA/US) and OHLC CA.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 500000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: 100
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: days
+        limit: 30
+  - id: tmx-equity-intraday-trades-premium
+    name: Equity Intraday Trades - Premium
+    type: paid
+    description: One-minute and one-second trade bars (CA/US) and OHLC CA, all symbols,
+      previous 5-year history.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 2000000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: years
+        limit: 5
+  - id: tmx-equity-intraday-quotes-starter
+    name: Equity Intraday Quotes - Starter
+    type: paid
+    description: One-minute and one-second quote bars (CA/US).
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 500000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: 100
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: days
+        limit: 30
+  - id: tmx-equity-intraday-quotes-premium
+    name: Equity Intraday Quotes - Premium
+    type: paid
+    description: One-minute and one-second quote bars (CA/US), all symbols, previous
+      5-year history.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 2000000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: years
+        limit: 5
+  - id: tmx-taq-nbbo-premium
+    name: Trades & Quotes Tick Data (TAQ NBBO) - Premium
+    type: paid
+    description: Premium trades and quotes CBBO tick data for Canada and US.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 5000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: days
+        limit: 30
+  - id: tmx-options-futures-premium
+    name: Essential Analytics for Options & Futures - Premium
+    type: paid
+    description: MX Daily Stats for Montreal Exchange options and futures, all symbols,
+      previous 5-year history.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 100000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: years
+        limit: 5
+  - id: tmx-corporate-actions-reference-premium
+    name: Corporate Actions & Reference Data - Premium
+    type: paid
+    description: Issuers CA, Global Symbols, and Global Symbols Delta, all symbols,
+      previous 5-year history.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 100000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: years
+        limit: 5
+  - id: tmx-essential-equities-premium
+    name: Essential Analytics for Equities - Premium
+    type: paid
+    description: Advanced/Basic/Daily/TSX daily stats (CA/US) and liquidity analytics,
+      all symbols, previous 5-year history.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 100000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: years
+        limit: 5
+  - id: tmx-broker-analytics-premium
+    name: Broker Analytics - Premium
+    type: paid
+    description: Broker Liquidity, Broker Daily Stats, and Broker Summary for Canada,
+      all symbols, previous 5-year history.
+    entries:
+      - label: Monthly call limit
+        name: monthly_calls
+        type: metered
+        metric: api_call
+        limit: 100000
+        timeFrame: month
+      - label: Symbol coverage
+        name: symbols
+        type: limit
+        metric: symbols
+        limit: -1
+      - label: Lookback window
+        name: lookback
+        type: limit
+        metric: years
+        limit: 5

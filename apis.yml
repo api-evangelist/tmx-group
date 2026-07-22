@@ -11,7 +11,7 @@ description: TMX Group operates Canadian capital-markets infrastructure - Toront
   broker analytics, short interest, buybacks, corporate actions and reference data,
   and Montreal Exchange options and futures analytics, plus cloud/S3 flat-file and
   notebook delivery.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tmx-group.png
 tags:
 - Financial
 - Market Data
@@ -22,7 +22,7 @@ tags:
 - Reference Data
 - Canada
 created: '2026-07-21'
-modified: '2026-07-21'
+modified: '2026-07-22'
 specificationVersion: '0.19'
 apis:
 - aid: tmx-group:tmx-equity-analytics-api
@@ -195,6 +195,34 @@ apis:
     S&P/TSX index datasets, authenticated with the same hub-issued API key and
     bearer token as V1.
 common:
+- type: DomainSecurity
+  url: security/tmx-group-domain-security.yml
+- type: Plans
+  url: plans/tmx-group-plans.yml
+- type: RateLimits
+  url: rate-limits/tmx-group-rate-limits.yml
+- type: WellKnown
+  url: well-known/tmx-group-well-known.yml
+- type: LLMsTxt
+  url: llms/tmx-group-llms.txt
+- type: ErrorCatalog
+  url: errors/tmx-group-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/tmx-group-lifecycle.yml
+- type: Deprecation
+  url: https://docs.tmxanalytics.com/#api-versioning
+- type: Authentication
+  url: authentication/tmx-group-authentication.yml
+- type: Conventions
+  url: conventions/tmx-group-conventions.yml
+- type: Conformance
+  url: conformance/tmx-group-conformance.yml
+- type: Components
+  url: components/tmx-group-components.yml
+- type: APIReference
+  url: https://docs.tmxanalytics.com/
+- type: GettingStarted
+  url: https://docs.tmxanalytics.com/#steps-to-access-apis
 - type: Website
   url: https://www.tmx.com
 - type: Portal
