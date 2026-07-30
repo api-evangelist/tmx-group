@@ -11,6 +11,19 @@ description: TMX Group operates Canadian capital-markets infrastructure - Toront
   broker analytics, short interest, buybacks, corporate actions and reference data,
   and Montreal Exchange options and futures analytics, plus cloud/S3 flat-file and
   notebook delivery.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tmx-group.png
 tags:
 - Financial
