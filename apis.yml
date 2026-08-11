@@ -50,10 +50,10 @@ apis:
   properties:
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-equities
     type: Documentation
-  description: End-of-day equity analytics for Canadian and US markets - basic, daily,
-    and advanced daily stats plus liquidity analytics and liquidity summaries - via
-    POST endpoints such as /v1/ca/dailystats, /v1/us/advanceddailystats, and
-    /v1/ca/liquidityanalytics returning JSON (T-1 data by 6:30am ET).
+  description: >-
+    End-of-day equity analytics for Canadian and US markets - basic, daily, and advanced daily stats plus
+    liquidity analytics and liquidity summaries - via POST endpoints such as /v1/ca/dailystats, /v1/us/advanceddailystats,
+    and /v1/ca/liquidityanalytics returning JSON (T-1 data by 6:30am ET).
 - aid: tmx-group:tmx-equity-intraday-api
   name: TMX Equity Intraday Trades and Quotes API
   tags:
@@ -69,9 +69,9 @@ apis:
     type: Documentation
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-equity-intraday-quotes
     type: Documentation
-  description: One-minute and one-second trade and quote bars for Canadian and US
-    equities via /v1/ca/tradebar1min, /v1/ca/tradebar1sec, /v1/ca/quotesbar1min,
-    /v1/ca/quotesbar1sec and US equivalents.
+  description: >-
+    One-minute and one-second trade and quote bars for Canadian and US equities via /v1/ca/tradebar1min,
+    /v1/ca/tradebar1sec, /v1/ca/quotesbar1min, /v1/ca/quotesbar1sec and US equivalents.
 - aid: tmx-group:tmx-taq-nbbo-api
   name: TMX Trades and Quotes Tick Data (TAQ NBBO) API
   tags:
@@ -84,8 +84,9 @@ apis:
   properties:
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-trades-and-quotes-tick-data
     type: Documentation
-  description: Historical trade-and-quote tick data with national best bid and offer
-    for Canadian and US listings via /v1/ca/taqnbbo and /v1/us/taqnbbo.
+  description: >-
+    Historical trade-and-quote tick data with national best bid and offer for Canadian and US listings
+    via /v1/ca/taqnbbo and /v1/us/taqnbbo.
 - aid: tmx-group:tmx-broker-analytics-api
   name: TMX Broker Analytics API
   tags:
@@ -99,10 +100,10 @@ apis:
     type: Documentation
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-broker-analytics-v2
     type: Documentation
-  description: Broker-level trading activity for Canadian markets - broker daily
-    stats, broker liquidity, and broker summaries - via /v1/ca/brokerdailystats,
-    /v1/ca/brokerliquidity, and /v1/ca/brokersummary, with GET-based V2 equivalents
-    on the Insight API.
+  description: >-
+    Broker-level trading activity for Canadian markets - broker daily stats, broker liquidity, and broker
+    summaries - via /v1/ca/brokerdailystats, /v1/ca/brokerliquidity, and /v1/ca/brokersummary, with GET-based
+    V2 equivalents on the Insight API.
 - aid: tmx-group:tmx-reference-data-api
   name: TMX Corporate Actions and Reference Data API
   tags:
@@ -117,10 +118,10 @@ apis:
     type: Documentation
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-corporate-actions-and-reference-data-v2
     type: Documentation
-  description: Issuer profiles, global symbol directories and deltas, and global
-    corporate actions via /v1/ca/issuers, /v1/globalsymbols, and /v1/globalsymbolsdelta,
-    with V2 additions covering TSX reference data (CRV bulletins, entitlements, FITC,
-    SMF) and S&P/TSX index data (/v2/sptsx/sdc, sde, sdl).
+  description: >-
+    Issuer profiles, global symbol directories and deltas, and global corporate actions via /v1/ca/issuers,
+    /v1/globalsymbols, and /v1/globalsymbolsdelta, with V2 additions covering TSX reference data (CRV
+    bulletins, entitlements, FITC, SMF) and S&P/TSX index data (/v2/sptsx/sdc, sde, sdl).
 - aid: tmx-group:tmx-options-futures-analytics-api
   name: TMX Options and Futures Analytics API
   tags:
@@ -129,14 +130,16 @@ apis:
   - Derivatives
   - Montreal Exchange
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-options-and-futures
+  humanURL: >-
+    https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-options-and-futures
   baseURL: https://analyticsapi.tmxanalytics.com/v1
   properties:
-  - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-options-and-futures
+  - url: >-
+      https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-options-and-futures
     type: Documentation
-  description: Montreal Exchange derivatives analytics - MX daily stats for options
-    and futures via /v1/ca/mxdailystats, with instrument, order book, and trade
-    datasets documented alongside.
+  description: >-
+    Montreal Exchange derivatives analytics - MX daily stats for options and futures via /v1/ca/mxdailystats,
+    with instrument, order book, and trade datasets documented alongside.
 - aid: tmx-group:tmx-short-interest-api
   name: TMX Short Interest Analytics API
   tags:
@@ -148,8 +151,9 @@ apis:
   properties:
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-short-interest-analytics
     type: Documentation
-  description: Short interest analytics for Canadian listings including days to cover
-    (/v1/daystocover) and percent of float (/v1/percentfloat).
+  description: >-
+    Short interest analytics for Canadian listings including days to cover (/v1/daystocover) and percent
+    of float (/v1/percentfloat).
 - aid: tmx-group:tmx-buybacks-api
   name: TMX Buybacks API
   tags:
@@ -173,8 +177,9 @@ apis:
   properties:
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-price-adjustment-curve
     type: Documentation
-  description: Price adjustment curves for historical price series via /v1/pac,
-    /v1/pacexplain, /v1/original, and /v1/smoothened.
+  description: >-
+    Price adjustment curves for historical price series via /v1/pac, /v1/pacexplain, /v1/original, and
+    /v1/smoothened.
 - aid: tmx-group:tmx-moc-imbalance-api
   name: TMX MOC Imbalance Analytics API
   tags:
@@ -186,8 +191,8 @@ apis:
   properties:
   - url: https://docs.tmxanalytics.com/#prod-tmx-ds-api-new-moc-imbalance-analytics
     type: Documentation
-  description: Market-on-close imbalance analytics for the Toronto Stock Exchange
-    closing auction via /v1/ca/moci.
+  description: >-
+    Market-on-close imbalance analytics for the Toronto Stock Exchange closing auction via /v1/ca/moci.
 - aid: tmx-group:tmx-insight-api-v2
   name: TMX Data Science API V2 (Insight API)
   tags:
@@ -202,11 +207,20 @@ apis:
     type: Documentation
   - url: https://docs.tmxanalytics.com/#dev-tmx-ds-api-access-apis-v2
     type: APIReference
-  description: Second-generation GET-based REST surface on
-    insightapi.tmxanalytics.com/v2 covering broker analytics, issuers, global
-    symbols, TSX reference data (CRV bulletins, entitlements, FITC, SMF), and
-    S&P/TSX index datasets, authenticated with the same hub-issued API key and
-    bearer token as V1.
+  description: >-
+    Second-generation GET-based REST surface on insightapi.tmxanalytics.com/v2 covering broker analytics,
+    issuers, global symbols, TSX reference data (CRV bulletins, entitlements, FITC, SMF), and S&P/TSX
+    index datasets, authenticated with the same hub-issued API key and bearer token as V1.
+- aid: tmx-group:tmx-group-general-api
+  name: TMX Group General API
+  description: The General API from TMX Group — 56 operation(s) for general.
+  humanURL: https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-equities
+  baseURL: https://analyticsapi.tmxanalytics.com/v1
+  tags:
+  - General
+  properties:
+  - type: OpenAPI
+    url: openapi/tmx-group-general-api-openapi.yml
 common:
 - type: DomainSecurity
   url: security/tmx-group-domain-security.yml
