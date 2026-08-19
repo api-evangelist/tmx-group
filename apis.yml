@@ -36,7 +36,7 @@ tags:
 - Canada
 created: '2026-07-21'
 modified: '2026-07-22'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: tmx-group:tmx-equity-analytics-api
   name: TMX Essential Analytics for Equities API
