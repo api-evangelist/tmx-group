@@ -89,6 +89,9 @@ apis:
 - aid: tmx-group:tmx-broker-analytics-api
   name: TMX Broker Analytics API
   tags:
+  - Brokers
+  - Analytics
+  tags_raw:
   - Broker
   - Analytics
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -191,6 +194,10 @@ apis:
 - aid: tmx-group:tmx-insight-api-v2
   name: TMX Data Science API V2 (Insight API)
   tags:
+  - Unified-API
+  - Reference Data
+  - Indices
+  tags_raw:
   - Unified API
   - Reference Data
   - Indices
