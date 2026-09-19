@@ -52,6 +52,10 @@ apis:
 - aid: tmx-group:tmx-equity-analytics-api
   name: TMX Essential Analytics for Equities API
   tags:
+  - Stocks
+  - Daily Stats
+  - Liquidity
+  tags_raw:
   - Equities
   - Daily Stats
   - Liquidity
@@ -68,6 +72,11 @@ apis:
 - aid: tmx-group:tmx-equity-intraday-api
   name: TMX Equity Intraday Trades and Quotes API
   tags:
+  - Intraday
+  - Trade
+  - Quotes
+  - OHLC
+  tags_raw:
   - Intraday
   - Trades
   - Quotes
