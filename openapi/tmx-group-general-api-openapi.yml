@@ -1,0 +1,633 @@
+openapi: 3.2.0
+info:
+  title: TMX Group General API
+  version: derived-2026-08-10
+  description: Derived from TMX Group's published documentation. Every operation in this document corresponds to a literal HTTP method and path found in that documentation; nothing is inferred. Request and response schemas are NOT described -- only the operations that are demonstrably documented.
+  x-provenance: derived-from-documentation
+  x-source-documentation: https://docs.tmxanalytics.com/
+  x-documentation-url: https://docs.tmxanalytics.com/
+  x-derived: '2026-08-10'
+  x-derivation-method: literal METHOD+path extraction from provider documentation; no pattern completion, no inferred operations
+  x-not-a-provider-contract: This is API Evangelist's reading of the documentation, not a contract published or endorsed by the provider.
+servers:
+- url: https://analyticsapi.tmxanalytics.com/v1
+- url: https://insightapi.tmxanalytics.com/v2
+tags:
+- name: General
+paths:
+  /v1/healthcheckfull:
+    get:
+      summary: Retrieve healthcheckfull
+      tags:
+      - General
+      operationId: get_v1_healthcheckfull
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L2129
+      x-source-context: curl <span class="nt">-X</span> GET https://analyticsapi.tmxanalytics.com/v1/healthcheckfull <span class="se">\</span>
+  /v1/authn:
+    post:
+      summary: Create authn
+      tags:
+      - General
+      operationId: post_v1_authn
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L2365
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/authn <span class="se">\</span>
+  /v1/changepassword:
+    post:
+      summary: Create changepassword
+      tags:
+      - General
+      operationId: post_v1_changepassword
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L2535
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/changepassword <span class="se">\</span>
+  /v1/dataavailability:
+    post:
+      summary: Create dataavailability
+      tags:
+      - General
+      operationId: post_v1_dataavailability
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L2726
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/dataavailability <span class="se">\</span>
+  /v1/forgotpassword:
+    post:
+      summary: Create forgotpassword
+      tags:
+      - General
+      operationId: post_v1_forgotpassword
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L3022
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/forgotpassword <span class="se">\</span>
+  /v1/revoke:
+    post:
+      summary: Create revoke
+      tags:
+      - General
+      operationId: post_v1_revoke
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L3179
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/revoke <span class="se">\</span>
+  /v1/ca/advanceddailystats:
+    post:
+      summary: Create advanceddailystats
+      tags:
+      - General
+      operationId: post_v1_ca_advanceddailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L3348
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/advanceddailystats <span class="se">\</span>
+  /v1/ca/basicdailystatsall:
+    post:
+      summary: Create basicdailystatsall
+      tags:
+      - General
+      operationId: post_v1_ca_basicdailystatsall
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L3650
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/basicdailystatsall <span class="se">\</span>
+  /v1/ca/dailystats:
+    post:
+      summary: Create dailystats
+      tags:
+      - General
+      operationId: post_v1_ca_dailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L3972
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/dailystats <span class="se">\</span>
+  /v1/ca/liquidityanalytics:
+    post:
+      summary: Create liquidityanalytics
+      tags:
+      - General
+      operationId: post_v1_ca_liquidityanalytics
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L4339
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/liquidityanalytics <span class="se">\</span>
+  /v1/ca/liquiditysummary:
+    post:
+      summary: Create liquiditysummary
+      tags:
+      - General
+      operationId: post_v1_ca_liquiditysummary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L4751
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/liquiditysummary <span class="se">\</span>
+  /v1/ca/tsxdailystats:
+    post:
+      summary: Create tsxdailystats
+      tags:
+      - General
+      operationId: post_v1_ca_tsxdailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L4991
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/tsxdailystats <span class="se">\</span>
+  /v1/us/advanceddailystats:
+    post:
+      summary: Create advanceddailystats
+      tags:
+      - General
+      operationId: post_v1_us_advanceddailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L5344
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/advanceddailystats <span class="se">\</span>
+  /v1/us/basicdailystatsall:
+    post:
+      summary: Create basicdailystatsall
+      tags:
+      - General
+      operationId: post_v1_us_basicdailystatsall
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L5646
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/basicdailystatsall <span class="se">\</span>
+  /v1/us/dailystats:
+    post:
+      summary: Create dailystats
+      tags:
+      - General
+      operationId: post_v1_us_dailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L5963
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/dailystats <span class="se">\</span>
+  /v1/ca/basicdailystats:
+    post:
+      summary: Create basicdailystats
+      tags:
+      - General
+      operationId: post_v1_ca_basicdailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L6322
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/basicdailystats <span class="se">\</span>
+  /v1/ca/tradebar1min:
+    post:
+      summary: Create tradebar1min
+      tags:
+      - General
+      operationId: post_v1_ca_tradebar1min
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L6586
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/tradebar1min <span class="se">\</span>
+  /v1/ca/tradebar1sec:
+    post:
+      summary: Create tradebar1sec
+      tags:
+      - General
+      operationId: post_v1_ca_tradebar1sec
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L6942
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/tradebar1sec <span class="se">\</span>
+  /v1/us/tradebar1min:
+    post:
+      summary: Create tradebar1min
+      tags:
+      - General
+      operationId: post_v1_us_tradebar1min
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L7294
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/tradebar1min <span class="se">\</span>
+  /v1/us/tradebar1sec:
+    post:
+      summary: Create tradebar1sec
+      tags:
+      - General
+      operationId: post_v1_us_tradebar1sec
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L7615
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/tradebar1sec <span class="se">\</span>
+  /v1/ca/brokerdailystats:
+    post:
+      summary: Create brokerdailystats
+      tags:
+      - General
+      operationId: post_v1_ca_brokerdailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L7938
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/brokerdailystats <span class="se">\</span>
+  /v1/ca/brokerliquidity:
+    post:
+      summary: Create brokerliquidity
+      tags:
+      - General
+      operationId: post_v1_ca_brokerliquidity
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L8298
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/brokerliquidity <span class="se">\</span>
+  /v1/ca/brokersummary:
+    post:
+      summary: Create brokersummary
+      tags:
+      - General
+      operationId: post_v1_ca_brokersummary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L8708
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/brokersummary <span class="se">\</span>
+  /v1/ca/issuers:
+    post:
+      summary: Create issuers
+      tags:
+      - General
+      operationId: post_v1_ca_issuers
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L9010
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/issuers <span class="se">\</span>
+  /v1/globalsymbols:
+    post:
+      summary: Create globalsymbols
+      tags:
+      - General
+      operationId: post_v1_globalsymbols
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L9317
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/globalsymbols <span class="se">\</span>
+  /v1/globalsymbolsdelta:
+    post:
+      summary: Create globalsymbolsdelta
+      tags:
+      - General
+      operationId: post_v1_globalsymbolsdelta
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L9628
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/globalsymbolsdelta <span class="se">\</span>
+  /v1/ca/moci:
+    post:
+      summary: Create moci
+      tags:
+      - General
+      operationId: post_v1_ca_moci
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L9917
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/moci <span class="se">\</span>
+  /v1/ca/mxdailystats:
+    post:
+      summary: Create mxdailystats
+      tags:
+      - General
+      operationId: post_v1_ca_mxdailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L10214
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/mxdailystats <span class="se">\</span>
+  /v1/ca/quotesbar1min:
+    post:
+      summary: Create quotesbar1min
+      tags:
+      - General
+      operationId: post_v1_ca_quotesbar1min
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L10698
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/quotesbar1min <span class="se">\</span>
+  /v1/ca/quotesbar1sec:
+    post:
+      summary: Create quotesbar1sec
+      tags:
+      - General
+      operationId: post_v1_ca_quotesbar1sec
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L11027
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/quotesbar1sec <span class="se">\</span>
+  /v1/us/quotesbar1min:
+    post:
+      summary: Create quotesbar1min
+      tags:
+      - General
+      operationId: post_v1_us_quotesbar1min
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L11352
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/quotesbar1min <span class="se">\</span>
+  /v1/us/quotesbar1sec:
+    post:
+      summary: Create quotesbar1sec
+      tags:
+      - General
+      operationId: post_v1_us_quotesbar1sec
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L11661
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/quotesbar1sec <span class="se">\</span>
+  /v1/ca/taqnbbo:
+    post:
+      summary: Create taqnbbo
+      tags:
+      - General
+      operationId: post_v1_ca_taqnbbo
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L11972
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/ca/taqnbbo <span class="se">\</span>
+  /v1/us/taqnbbo:
+    post:
+      summary: Create taqnbbo
+      tags:
+      - General
+      operationId: post_v1_us_taqnbbo
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L12302
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/us/taqnbbo <span class="se">\</span>
+  /v1/daystocover:
+    post:
+      summary: Create daystocover
+      tags:
+      - General
+      operationId: post_v1_daystocover
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L12637
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/daystocover <span class="se">\</span>
+  /v1/original:
+    post:
+      summary: Create original
+      tags:
+      - General
+      operationId: post_v1_original
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L12879
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/original <span class="se">\</span>
+  /v1/percentfloat:
+    post:
+      summary: Create percentfloat
+      tags:
+      - General
+      operationId: post_v1_percentfloat
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L13216
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/percentfloat <span class="se">\</span>
+  /v1/smoothened:
+    post:
+      summary: Create smoothened
+      tags:
+      - General
+      operationId: post_v1_smoothened
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L13458
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/smoothened <span class="se">\</span>
+  /v1/northamericanbuybacks:
+    post:
+      summary: Create northamericanbuybacks
+      tags:
+      - General
+      operationId: post_v1_northamericanbuybacks
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L13797
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/northamericanbuybacks <span class="se">\</span>
+  /v1/pac:
+    post:
+      summary: Create pac
+      tags:
+      - General
+      operationId: post_v1_pac
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L14332
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/pac <span class="se">\</span>
+  /v1/pacexplain:
+    post:
+      summary: Create pacexplain
+      tags:
+      - General
+      operationId: post_v1_pacexplain
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L14612
+      x-source-context: curl <span class="nt">-X</span> POST https://analyticsapi.tmxanalytics.com/v1/pacexplain <span class="se">\</span>
+  /v2/authn:
+    post:
+      summary: Create authn
+      tags:
+      - General
+      operationId: post_v2_authn
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L25454
+      x-source-context: curl <span class="nt">-X</span> POST https://insightapi.tmxanalytics.com/v2/authn <span class="se">\</span>
+  /authn:
+    post:
+      summary: Create authn
+      tags:
+      - General
+      operationId: post_authn
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L25480
+      x-source-context: <p><code>POST /authn</code></p>
+  /crv/bulletins:
+    get:
+      summary: Retrieve bulletins
+      tags:
+      - General
+      operationId: get_crv_bulletins
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L25637
+      x-source-context: <p><code>GET /crv/bulletins</code></p>
+  /crv/entitlements:
+    get:
+      summary: Retrieve entitlements
+      tags:
+      - General
+      operationId: get_crv_entitlements
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L25908
+      x-source-context: <p><code>GET /crv/entitlements</code></p>
+  /crv/fitc:
+    get:
+      summary: Retrieve fitc
+      tags:
+      - General
+      operationId: get_crv_fitc
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L26151
+      x-source-context: <p><code>GET /crv/fitc</code></p>
+  /crv/smf:
+    get:
+      summary: Retrieve smf
+      tags:
+      - General
+      operationId: get_crv_smf
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L26373
+      x-source-context: <p><code>GET /crv/smf</code></p>
+  /sptsx/sdc:
+    get:
+      summary: Retrieve sdc
+      tags:
+      - General
+      operationId: get_sptsx_sdc
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L26588
+      x-source-context: <p><code>GET /sptsx/sdc</code></p>
+  /sptsx/sde:
+    get:
+      summary: Retrieve sde
+      tags:
+      - General
+      operationId: get_sptsx_sde
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L26810
+      x-source-context: <p><code>GET /sptsx/sde</code></p>
+  /sptsx/sdl:
+    get:
+      summary: Retrieve sdl
+      tags:
+      - General
+      operationId: get_sptsx_sdl
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L27046
+      x-source-context: <p><code>GET /sptsx/sdl</code></p>
+  /ca/brokerdailystats:
+    get:
+      summary: Retrieve brokerdailystats
+      tags:
+      - General
+      operationId: get_ca_brokerdailystats
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L27235
+      x-source-context: <p><code>GET /ca/brokerdailystats</code></p>
+  /ca/brokerliquidity:
+    get:
+      summary: Retrieve brokerliquidity
+      tags:
+      - General
+      operationId: get_ca_brokerliquidity
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L27532
+      x-source-context: <p><code>GET /ca/brokerliquidity</code></p>
+  /ca/brokersummary:
+    get:
+      summary: Retrieve brokersummary
+      tags:
+      - General
+      operationId: get_ca_brokersummary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L27869
+      x-source-context: <p><code>GET /ca/brokersummary</code></p>
+  /ca/issuers:
+    get:
+      summary: Retrieve issuers
+      tags:
+      - General
+      operationId: get_ca_issuers
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L28120
+      x-source-context: <p><code>GET /ca/issuers</code></p>
+  /globalsymbols:
+    get:
+      summary: Retrieve globalsymbols
+      tags:
+      - General
+      operationId: get_globalsymbols
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L28378
+      x-source-context: <p><code>GET /globalsymbols</code></p>
+  /globalsymbolsdelta:
+    get:
+      summary: Retrieve globalsymbolsdelta
+      tags:
+      - General
+      operationId: get_globalsymbolsdelta
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.tmxanalytics.com/#L28639
+      x-source-context: <p><code>GET /globalsymbolsdelta</code></p>
