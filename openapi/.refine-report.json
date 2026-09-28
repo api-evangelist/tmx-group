@@ -1,0 +1,18 @@
+{
+  "provider": "tmx-group",
+  "sources": [
+    "tmx-group-derived-openapi.yml"
+  ],
+  "outputs": [
+    "tmx-group-general-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/tmx-group-derived-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "apis.yml register: written (+1 apis, 12 total)"
+  ],
+  "skipped": []
+}
