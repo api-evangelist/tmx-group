@@ -37,6 +37,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tmx-group.png
 tags:
+- Finance
+- Market Data
+- Stocks
+- Exchange
+- Derivatives
+- Analytics
+- Reference Data
+- Canada
+tags_raw:
 - Financial
 - Market Data
 - Stocks
@@ -214,13 +223,14 @@ apis:
 - aid: tmx-group:tmx-insight-api-v2
   name: TMX Data Science API V2 (Insight API)
   tags:
-  - Unified-API
+  - Unified API
   - Reference Data
   - Indices
   tags_raw:
   - Unified API
   - Reference Data
   - Indices
+  - Unified-API
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://docs.tmxanalytics.com/#tmx-data-science-api-v2
   baseURL: https://insightapi.tmxanalytics.com/v2
