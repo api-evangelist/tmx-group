@@ -240,3 +240,113 @@ plans:
         type: limit
         metric: years
         limit: 5
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  units:
+  - object
+  - period
+  - request
+  plans:
+  - name: Equity Intraday Trades - Free
+    access: free
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Equity Intraday Trades - Starter
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Equity Intraday Trades - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Equity Intraday Quotes - Starter
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Equity Intraday Quotes - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Trades & Quotes Tick Data (TAQ NBBO) - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Essential Analytics for Options & Futures - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Corporate Actions & Reference Data - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Essential Analytics for Equities - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
+  - name: Broker Analytics - Premium
+    access: paid
+    model: metered
+    model_how: derived
+    units:
+    - object
+    - period
+    - request
+    periods:
+    - month
