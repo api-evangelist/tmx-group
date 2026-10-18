@@ -118,11 +118,12 @@ apis:
 - aid: tmx-group:tmx-broker-analytics-api
   name: TMX Broker Analytics API
   tags:
-  - Brokers
+  - Brokerage
   - Analytics
   tags_raw:
   - Broker
   - Analytics
+  - Brokers
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://docs.tmxanalytics.com/#prod-tmx-ds-api-broker-analytics
   baseURL: https://analyticsapi.tmxanalytics.com/v1
