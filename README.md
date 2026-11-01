@@ -1,4 +1,4 @@
-# TMX Group (tmx-group)
+# TMX Group
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,118 +66,114 @@
 
 TMX Group operates Canadian capital-markets infrastructure - Toronto Stock Exchange, TSX Venture Exchange, TSX Alpha, and the Montreal Exchange - and sells market data through its TMX Datalinx arm. Alongside sales-gated real-time broadcast feeds (TL1/TL2, QuantumFeed, MX Order Book Feed) it offers a self-serve TMX Analytics platform (hub.tmxanalytics.com) whose REST Data Science APIs deliver Canadian and US equity daily stats, intraday trade/quote bars, TAQ NBBO tick data, broker analytics, short interest, buybacks, corporate actions and reference data, and Montreal Exchange options and futures analytics, plus cloud/S3 flat-file and notebook delivery.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/tmx-group/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/tmx-group/refs/heads/main/apis.yml)
+**Areas:** Finance · Market Data · Stocks · Exchange · Derivatives · Analytics · Reference Data · Canada
 
-## Tags
+## TMX Group on APIs.io
 
-- Financial
-- Market Data
-- Stocks
-- Exchange
-- Derivatives
-- Analytics
-- Reference Data
-- Canada
+Everything profiled for TMX Group is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tmx-group/](https://apis.io/providers/tmx-group/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (11)
 
-- **Created:** 2026-07-21
-- **Modified:** 2026-07-21
+- [TMX Essential Analytics for Equities API](https://apis.io/apis/tmx-group/tmx-equity-analytics-api/) — End-of-day equity analytics for Canadian and US markets - basic, daily, and advanced daily stats plus liquidity analytics and liquidity summaries - via POST…
+- [TMX Equity Intraday Trades and Quotes API](https://apis.io/apis/tmx-group/tmx-equity-intraday-api/) — One-minute and one-second trade and quote bars for Canadian and US equities via /v1/ca/tradebar1min, /v1/ca/tradebar1sec, /v1/ca/quotesbar1min,…
+- [TMX Trades and Quotes Tick Data (TAQ NBBO) API](https://apis.io/apis/tmx-group/tmx-taq-nbbo-api/) — Historical trade-and-quote tick data with national best bid and offer for Canadian and US listings via /v1/ca/taqnbbo and /v1/us/taqnbbo.
+- [TMX Broker Analytics API](https://apis.io/apis/tmx-group/tmx-broker-analytics-api/) — Broker-level trading activity for Canadian markets - broker daily stats, broker liquidity, and broker summaries - via /v1/ca/brokerdailystats,…
+- [TMX Corporate Actions and Reference Data API](https://apis.io/apis/tmx-group/tmx-reference-data-api/) — Issuer profiles, global symbol directories and deltas, and global corporate actions via /v1/ca/issuers, /v1/globalsymbols, and /v1/globalsymbolsdelta, with…
+- [TMX Options and Futures Analytics API](https://apis.io/apis/tmx-group/tmx-options-futures-analytics-api/) — Montreal Exchange derivatives analytics - MX daily stats for options and futures via /v1/ca/mxdailystats, with instrument, order book, and trade datasets…
+- [TMX Short Interest Analytics API](https://apis.io/apis/tmx-group/tmx-short-interest-api/) — Short interest analytics for Canadian listings including days to cover (/v1/daystocover) and percent of float (/v1/percentfloat).
+- [TMX Buybacks API](https://apis.io/apis/tmx-group/tmx-buybacks-api/) — North American share buyback activity via /v1/northamericanbuybacks.
+- [TMX Price Adjustment Curve API](https://apis.io/apis/tmx-group/tmx-price-adjustment-curve-api/) — Price adjustment curves for historical price series via /v1/pac, /v1/pacexplain, /v1/original, and /v1/smoothened.
+- [TMX MOC Imbalance Analytics API](https://apis.io/apis/tmx-group/tmx-moc-imbalance-api/) — Market-on-close imbalance analytics for the Toronto Stock Exchange closing auction via /v1/ca/moci.
+- [TMX Data Science API V2 (Insight API)](https://apis.io/apis/tmx-group/tmx-insight-api-v2/) — Second-generation GET-based REST surface on insightapi.tmxanalytics.com/v2 covering broker analytics, issuers, global symbols, TSX reference data (CRV…
 
-## APIs
+### Published properties
 
-### TMX Essential Analytics for Equities API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-End-of-day equity analytics for Canadian and US markets - basic, daily, and advanced daily stats plus liquidity analytics and liquidity summaries - via POST endpoints such as /v1/ca/dailystats, /v1/us/advanceddailystats, and /v1/ca/liquidityanalytics returning JSON (T-1 data by 6:30am ET).
+#### Security (2)
 
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-equities](https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-equities)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
+Authentication, trust centre, and vulnerability disclosure.
 
-### TMX Equity Intraday Trades and Quotes API
+- [Tmx Group Authentication](https://apis.io/security/tmx-group/tmx-group-authentication/)
+- [Tmx Group Domain Security](https://apis.io/security/tmx-group/tmx-group-domain-security/)
 
-One-minute and one-second trade and quote bars for Canadian and US equities via /v1/ca/tradebar1min, /v1/ca/tradebar1sec, /v1/ca/quotesbar1min, /v1/ca/quotesbar1sec and US equivalents.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-equity-intraday-trades](https://docs.tmxanalytics.com/#prod-tmx-ds-api-equity-intraday-trades)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
+Published plans, tiers and prices.
 
-### TMX Trades and Quotes Tick Data (TAQ NBBO) API
+- [Tmx Group Plans](https://apis.io/plans/tmx-group/tmx-group-plans/)
 
-Historical trade-and-quote tick data with national best bid and offer for Canadian and US listings via /v1/ca/taqnbbo and /v1/us/taqnbbo.
+#### Rate limits (1)
 
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-trades-and-quotes-tick-data](https://docs.tmxanalytics.com/#prod-tmx-ds-api-trades-and-quotes-tick-data)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
+Published request limits.
 
-### TMX Broker Analytics API
+- [Tmx Group Rate Limits](https://apis.io/rate-limits/tmx-group/tmx-group-rate-limits/)
 
-Broker-level trading activity for Canadian markets - broker daily stats, broker liquidity, and broker summaries - via /v1/ca/brokerdailystats, /v1/ca/brokerliquidity, and /v1/ca/brokersummary, with GET-based V2 equivalents on the Insight API.
+## Where to find this API
 
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-broker-analytics](https://docs.tmxanalytics.com/#prod-tmx-ds-api-broker-analytics)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX Corporate Actions and Reference Data API
-
-Issuer profiles, global symbol directories and deltas, and global corporate actions via /v1/ca/issuers, /v1/globalsymbols, and /v1/globalsymbolsdelta, with V2 additions covering TSX reference data (CRV bulletins, entitlements, FITC, SMF) and S&P/TSX index data (/v2/sptsx/sdc, sde, sdl).
-
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-corporate-actions-and-reference-data](https://docs.tmxanalytics.com/#prod-tmx-ds-api-corporate-actions-and-reference-data)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX Options and Futures Analytics API
-
-Montreal Exchange derivatives analytics - MX daily stats for options and futures via /v1/ca/mxdailystats, with instrument, order book, and trade datasets documented alongside.
-
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-options-and-futures](https://docs.tmxanalytics.com/#prod-tmx-ds-api-essential-analytics-for-options-and-futures)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX Short Interest Analytics API
-
-Short interest analytics for Canadian listings including days to cover (/v1/daystocover) and percent of float (/v1/percentfloat).
-
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-short-interest-analytics](https://docs.tmxanalytics.com/#prod-tmx-ds-api-short-interest-analytics)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX Buybacks API
-
-North American share buyback activity via /v1/northamericanbuybacks.
-
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-buybacks](https://docs.tmxanalytics.com/#prod-tmx-ds-api-buybacks)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX Price Adjustment Curve API
-
-Price adjustment curves for historical price series via /v1/pac, /v1/pacexplain, /v1/original, and /v1/smoothened.
-
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-price-adjustment-curve](https://docs.tmxanalytics.com/#prod-tmx-ds-api-price-adjustment-curve)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX MOC Imbalance Analytics API
-
-Market-on-close imbalance analytics for the Toronto Stock Exchange closing auction via /v1/ca/moci.
-
-- **Human URL:** [https://docs.tmxanalytics.com/#prod-tmx-ds-api-new-moc-imbalance-analytics](https://docs.tmxanalytics.com/#prod-tmx-ds-api-new-moc-imbalance-analytics)
-- **Base URL:** `https://analyticsapi.tmxanalytics.com/v1`
-
-### TMX Data Science API V2 (Insight API)
-
-Second-generation GET-based REST surface on insightapi.tmxanalytics.com/v2 covering broker analytics, issuers, global symbols, TSX reference data (CRV bulletins, entitlements, FITC, SMF), and S&P/TSX index datasets, authenticated with the same hub-issued API key and bearer token as V1.
-
-- **Human URL:** [https://docs.tmxanalytics.com/#tmx-data-science-api-v2](https://docs.tmxanalytics.com/#tmx-data-science-api-v2)
-- **Base URL:** `https://insightapi.tmxanalytics.com/v2`
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.tmx.com)
-- [Portal](https://hub.tmxanalytics.com/)
 - [Documentation](https://docs.tmxanalytics.com/)
-- [GitHub Organization](https://github.com/TMXGroup)
-- [LinkedIn](https://www.linkedin.com/company/tmx-group)
-- [Blog](https://www.tmx.com/newsroom)
+- [Getting started](https://docs.tmxanalytics.com/#steps-to-access-apis)
+- [API reference](https://docs.tmxanalytics.com/)
 - [Pricing](https://www.tmxinfoservices.com/market-data/pricing-and-contract-documents)
-- [Sign Up](https://hub.tmxanalytics.com/login)
-- [Terms of Service](https://www.tmx.com/terms-of-use)
-- [Privacy Policy](https://www.tmx.com/en/privacy-policy)
+- [Sign up](https://hub.tmxanalytics.com/login)
 - [Support](https://docs.tmxanalytics.com/#tmx-api-support)
+- [Blog](https://www.tmx.com/newsroom)
+- [Terms of service](https://www.tmx.com/terms-of-use)
+- [Privacy policy](https://www.tmx.com/en/privacy-policy)
+- [GitHub](https://github.com/TMXGroup)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 37.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 38.2 |
+| Developer ergonomics | 48.8 |
+| Access clarity | 63.2 |
+
+**Agent readiness 7.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 36.1** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tmx-group/](https://apis.io/providers/tmx-group/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for TMX Group: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tmx-group/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
